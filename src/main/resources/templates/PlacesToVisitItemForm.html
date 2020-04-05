@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
 	<!--En-tête / Navigation-->
 	<header id="head_PTV">
 		<nav id="nav_title">
@@ -33,12 +34,26 @@
 		</nav>
 	</header>
 
-	<div id="error_msg">
-    	<h1 class="error_oops">Oops!</h1>
-    	<div class="err_msg">
-    		<h2>This is embarrassing!&#128532; Please contact our support! &#128591;</h2>
-    	</div>
-	</div>
+	<section id="new_item">
+		
+		<div id="formulaire" action="#" method="post" th:action="@{/placestovisitItemForm}"
+		th:object="${placestovisitItem}">
+			<form class="form_field">
+				<fieldset>
+					<legend class="form_title">Submit a place</legend>
+				
+					<input type="text" name="place" placeholder="Place/Region/Museum">
+					<input type="text" name="country" placeholder="Country">
+					<textarea rows="5" cols="22" placeholder="Description"></textarea>
+					<input type="number" name="price" placeholder="Price">
+					<input  type="text" name="priority" placeholder="Low/Medium/High">
+					<div id="btn_send">
+					<input type="submit" value="Save Place" class="btn_form">
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</section>
 	
 	<footer class="footer_form">
 
@@ -66,6 +81,6 @@
 			</div>
 		</div>
 	</footer>
-		
+	
 </body>
 </html>

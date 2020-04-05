@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
 	<!--En-tête / Navigation-->
 	<header id="head_PTV">
 		<nav id="nav_title">
@@ -33,14 +34,45 @@
 		</nav>
 	</header>
 
-	<div id="error_msg">
-    	<h1 class="error_oops">Oops!</h1>
-    	<div class="err_msg">
-    		<h2>This is embarrassing!&#128532; Please contact our support! &#128591;</h2>
-    	</div>
+	<div class="container">
+		<h2 id="title_tab">My Places</h2>
+		<div class="nb_places">
+			Number of places to visit: <span th:text="${numberOfPlaces}"></span>
+		</div>
+		<br>
+
+		<table class="tab">
+			<thead class="tab_head">
+				<tr>
+					<th class="text_head1">Place</th>
+					<th class="text_head2">Country</th>
+					<th class="text_head3">Price</th>
+					<th class="text_head4">Priority</th>
+					<th class="text_head5">Description</th>
+					<th class="text_head6"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr id="tab_body" th:each="placestovisitItem : ${placestovisitItem}">
+					<td th:text="${placestovisitItem.place}">Cathédrale de Strasbourg</td>
+					<td th:text="${placestovisitItem.country}">France</td>
+					<td th:text="${placestovisitItem.price}">15</td>
+					<td th:text="${placestovisitItem.priority}">High</td>
+					<td th:text="${placestovisitItem.comment}">It's beautiful</td>
+					<td><a href="#" class="btn_update" role="button" 
+					th:href="@{/placestovisitItemForm(id=${placestovisitItem.id})}">Update</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+		<br>
+		<hr>
+		
+	<div class="map_container">
+		<iframe id="maps" src=""></iframe>
 	</div>
 	
-	<footer class="footer_form">
+	<footer class="footer_list">
 
 		<div class="footer_box">
 
@@ -51,10 +83,10 @@
 		
 			<div class="social_media">
 				<h3 class="footer_title1">Share your list with your Friends</h3>	
-				<a href="#"><i class="fab fa-facebook-f"></i></a>
-				<a href="#"><i class="fab fa-twitter"></i></a>
-				<a href="#"><i class="fab fa-instagram"></i></a>
-				<a href="#"><i class="fab fa-google"></i></a>
+				<a><i class="fab fa-facebook-f"></i></a>
+				<a><i class="fab fa-twitter"></i></a>
+				<a><i class="fab fa-instagram"></i></a>
+				<a><i class="fab fa-google"></i></a>
 			</div>
 
 			<div class="legal_terms">
@@ -66,6 +98,6 @@
 			</div>
 		</div>
 	</footer>
-		
+	
 </body>
 </html>

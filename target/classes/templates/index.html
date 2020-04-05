@@ -1,0 +1,182 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style_ordi.css">
+	<link rel="stylesheet" type="text/css" href="css/style_sp_tab.css">
+	<link rel="stylesheet" href="fonts/web-fonts-with-css/css/fontawesome-all.min.css">
+	<meta name="viewport" content="width=device-width"/>
+	<title>PlacesToVisit - Save Your Dreams</title>
+	<meta name="description" content="PlacesToVisit vous permet d'enregistrer les lieux naturels, urbains et culturels où vous rêvez d'aller !">
+</head>
+
+<body>
+
+<!--En-tête / Navigation-->
+	<header id="head_PTV">
+		<nav id="nav_title">
+			<div id="logo_title">
+				<a href="./index.html"><img src="img/logo.png" alt="logo PlacesToVisit"></a>
+				<h1><a href="./index.html">PlacesToVisit</a></h1>
+			</div>
+	
+			<div id="menu_nav">
+
+				<input class="check_hamb" type="checkbox" />
+				<i class="fas fa-times"></i>
+				<i class="fas fa-bars"></i>
+
+				<ul id="menu">
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./MyPlacesToVisit.html">My Places</a></li>
+					<li><a href="./PlacesToVisitItemForm.html">New Places</a></li>
+				</ul>
+			</div>
+		</nav>
+
+<!--Slider-->
+		<div id="slider">
+			<img class="slider1" src="img/slider/bg1.jpg" alt="mont Saint-Michel">
+			<img class="slider2" src="img/slider/bg2.jpg" alt="musée du Louvre Paris">
+		</div>
+
+		<label for="control_left" class="previous"><i class="fas fa-angle-left"></i></label>
+		<label for="control_right" class="next"><i class="fas fa-angle-right"></i></label>
+
+		<div class="slider_caption">
+			<h1><span>PlacesToVisit</span> : LE LIEU DE TOUS VOS LIEUX !</h1>
+			<p>Vous avez un rêve ? Nous vous aidons à le réaliser !</p>
+			<div class="btn_info">
+				<a href="#features">Plus d'infos</a>
+			</div>
+		</div>
+
+<!--Accueil mode mobile-->
+		<div id="responsive">
+			<h2>LE LIEU DE TOUS VOS LIEUX !</h2>
+
+			<div id="responsive_caption">
+				<p>Vous avez un rêve ?<br>
+					Nous vous aidons à le réaliser !</p>
+				<div class="btn_info_res">
+					<a href="#features">Features</a>
+				</div>
+
+				<p>Pour consulter votre liste de lieux à voir</p>
+				<div class="btn_info_res">
+					<a href="./MyPlacesToVisit.html">My Places</a>
+				</div>
+
+				<p>Pour ajouter un lieu qui vous tient à coeur</p>
+				<div class="btn_info_res">
+					<a href="./PlacesToVisitItemForm.html">New Place</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+<!--Nos services-->
+	<section id="features">
+
+		<h2>FEATURES</h2>
+			
+			<hr>
+
+			<p class="intro_features">
+				<strong>All the places you always wanted to visit</strong> : from dream to reality, choose all the places you want to see ! <br>
+				Create YOUR library of desire and YOUR library of achievements !!
+			</p>
+
+			<div id="desk_img">
+				<img src="img/timetotravel.jpg" alt="équipement bureau recherche travail vacance">
+
+			<div id="description">
+
+				<div id="art_form">
+					<div>
+						<i class="far fa-save"></i>
+					</div>
+					<article>
+						<h3>Find and Save places</h3><br>
+						<p>Choisis les lieux où tu veux aller, décris en quoi ils sont importants et enregistre les pour les retrouver facilement</p>
+					</article>
+				</div>
+					<br>
+
+				<div id="art_list">
+					<div>
+						<i class="fas fa-list-ol"></i>
+					</div>
+					<article>
+						<h3>Check Your List</h3><br>
+						<p>Gère ta liste personnalisée par les lieux que tu veux visiter, modifie les ou supprime les.<br>
+						Si tu cherches quelque chose à faire pour tes vacances prochaines ou simplement pour ton week-end, regarde ta liste</p>
+					</article>
+				</div>
+					<br>
+
+				<div id="art_map">
+					<div>
+						<i class="fas fa-map-marker-alt"></i>
+					</div>
+					<article>
+						<h3>Visualize the map</h3><br>
+						<p>Un coup d'oeil rapide sur les endroits que tu as ajouté à ta liste, pour savoir précisément où il se trouve et sur ce qu'il y a dans les environs !</p>
+					</article>
+				</div>
+				<br>
+
+				<div id="art_promo">
+					<div>
+						<i class="fas fa-percent"></i>
+					</div>
+					<article>
+						<h3>Coming soon : Obtiens des promo sur tes endroits préférés</h3><br>
+						<p>Reçois toutes les informations et offres tarifaires sur tes endroits préférés pour ne jamais rater un bon plan !</p>
+					</article>
+				</div>
+				<br>
+
+				<div id="art_done">
+					<div>
+						<i class="fas fa-check"></i>
+					</div>
+					<article>
+						<h3>Coming soon : Affiche les lieux où tu as été</h3><br>
+						<p>De "à faire" à "fait", liste les lieux où tu as été, raconte-nous ce que tu as vécu, tes impressions, tes émotions !</p>
+					</article>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	
+	<footer class="footer_home">
+
+		<div class="footer_box">
+
+			<div class="footer_contact">
+		 	 <h3>Contact</h3>		
+				<a class="footer_btn" href="mailto:jenkinsboomers@gmail.com">Email Us</a>
+			</div>
+		
+			<div class="social_media">
+				<h3 class="footer_title1">Share your list with your Friends</h3>	
+				<a href="#"><i class="fab fa-facebook-f"></i></a>
+				<a href="#"><i class="fab fa-twitter"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+				<a href="#"><i class="fab fa-google"></i></a>
+			</div>
+
+			<div class="legal_terms">
+				<h3 class="footer_title2">Legal</h3>
+					
+				<li><a href="#">Privacy Policy</a></li>
+				<li><a href="#">Terms of Use</a></li>
+				<li><a href="#">Sitemap</a></li>
+			</div>
+		</div>
+	</footer>
+	
+</body>
+</html>
+
