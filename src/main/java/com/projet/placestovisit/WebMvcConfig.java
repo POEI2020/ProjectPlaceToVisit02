@@ -1,4 +1,4 @@
-package com.projet.placetovisit;
+package com.projet.placestovisit;
 
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;

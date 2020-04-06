@@ -360,13 +360,25 @@ hr::after{
 	position: absolute;
 	width: 100%;
 }
-.footer_other_pages
+.footer_list, .footer_form
 {
 	color: #ffffff;
 	background-color: rgb(44, 42, 42);
-	position: absolute;
 	width: 100%;
+	position: absolute;
 	bottom: 0;
+}
+.footer_home li, .footer_list li, .footer_form li
+{
+	list-style: none;
+	padding-left: 10px;
+}
+.footer_home li a, .footer_list li a, .footer_form li a
+{
+	text-decoration: none;
+	color: white;
+	margin-top: 0;
+	padding: 0;
 }
 .footer_box
 {
@@ -396,6 +408,7 @@ hr::after{
   {
 	  font-size: 2em;
 	  padding: 10px;
+	  color: red;
   }
 .footer_btn
   {
@@ -407,18 +420,6 @@ hr::after{
 	background-color: rgb(50,140,170);
 	box-shadow: 0 2px rgb(30,120,150);
 	border-radius: 3px;
-}
-.footer_home li, .footer_other_pages li
-{
-	list-style: none;
-	padding-left: 10px;
-}
-.footer_home li a, .footer_other_pages li a
-{
-	text-decoration: none;
-	color: white;
-	margin-top: 0;
-	padding: 0;
 }
 .footer_title1
 {
@@ -524,7 +525,7 @@ hr::after{
 }
 .tab
 {
-	width: 60%;
+	width: 80%;
 	margin: auto;
 	margin-bottom: 10px;
 	border-collapse:collapse;

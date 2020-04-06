@@ -32,6 +32,10 @@
 		left: 20%;
 		right: 20%;
 	}
+	.tab
+	{
+		width: 95%;
+	}
 }
 
 
@@ -211,12 +215,27 @@
 	}
 	.tab
 	{
-		font-size: 0.9em;;
+		font-size: 0.9em;
+		width: 95%;
 	}
 	.footer_contact, .social_media, .legal_terms
 	{
 		margin: 0 10px 0 10px;
 		width: 100%;
+	}
+	.footer_form
+	{
+		width: 100%;
+		position: relative;
+		bottom: 0;
+	}
+	.footer_list
+	{
+		display: none;
+	}
+	#maps
+	{
+		bottom: 0px;
 	}
 
 }

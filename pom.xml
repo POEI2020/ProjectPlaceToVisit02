@@ -9,11 +9,11 @@
 		<version>2.2.6.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.projet.placetovisit</groupId>
-	<artifactId>PlaceToVisit</artifactId>
+	<groupId>com.projet.placestovisit</groupId>
+	<artifactId>PlacesToVisit</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>PlaceToVisit</name>
-	<description>PlaceToVisit Application</description>
+	<name>PlacesToVisit</name>
+	<description>PlacesToVisit Application</description>
 
 	<packaging>war</packaging>
 
@@ -86,7 +86,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>PlaceToVisit</finalName>
+		<finalName>PlacesToVisit</finalName>
 		<plugins>
 			<!-- plugin Maven pour Spring Boot -->
 			<plugin>

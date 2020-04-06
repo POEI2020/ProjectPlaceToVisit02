@@ -1,4 +1,4 @@
-package com.projet.placetovisit;
+package com.projet.placestovisit;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -9,10 +9,10 @@ public class WebMvcConfig2 implements WebMvcConfigurer {
 
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/").setViewName("home.html");
-		registry.addViewController("/home.html").setViewName("home.html");
-		registry.addViewController("/MyPlaceToVisit.html").setViewName("MyPlaceToVisit.html");
-		registry.addViewController("/PlaceToVisitItemForm.html").setViewName("PlaceToVisitItemForm.html");
+		registry.addViewController("/").setViewName("index.html");
+		registry.addViewController("/index.html").setViewName("index.html");
+		registry.addViewController("/MyPlacesToVisit.html").setViewName("MyPlacesToVisit.html");
+		registry.addViewController("/PlacesToVisitItemForm.html").setViewName("PlacesToVisitItemForm.html");
 	}
 
 }

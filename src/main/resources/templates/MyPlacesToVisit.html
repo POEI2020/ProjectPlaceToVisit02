@@ -5,8 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style_sp_tab.css">
 	<link rel="stylesheet" href="fonts/web-fonts-with-css/css/fontawesome-all.min.css">
 	<meta name="viewport" content="width=device-width"/>
-	<title>PlaceToVisit - Save Your Dreams</title>
-	<meta name="description" content="PlaceToVisit vous permet d'enregistrer les lieux naturels, urbains et culturels où vous rêvez d'aller !">
+	<title>PlacesToVisit - Save Your Dreams</title>
+	<meta name="description" content="PlacesToVisit vous permet d'enregistrer les lieux naturels, urbains et culturels où vous rêvez d'aller !">
 </head>
 
 <body>
@@ -15,8 +15,8 @@
 	<header id="head_PTV">
 		<nav id="nav_title">
 			<div id="logo_title">
-				<a href="./home.html"><img src="img/logo.png" alt="logo PlaceToVisit"></a>
-				<h1><a href="./home.html">PlaceToVisit</a></h1>
+				<a href="./index.html"><img src="img/logo.png" alt="logo PlacesToVisit"></a>
+				<h1><a href="./index.html">PlacesToVisit</a></h1>
 			</div>
 	
 			<div id="menu_nav">
@@ -26,9 +26,9 @@
 				<i class="fas fa-bars"></i>
 
 				<ul id="menu">
-					<li><a href="./home.html">Home</a></li>
-					<li><a href="./MyPlaceToVisit.html">My Places</a></li>
-					<li><a href="./PlaceToVisitItemForm.html">New Places</a></li>
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="./MyPlacesToVisit.html">My Places</a></li>
+					<li><a href="./PlacesToVisitItemForm.html">New Places</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -53,14 +53,14 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr id="tab_body" th:each="placetovisitItem : ${placetovisitItem}">
-					<td th:text="${placetovisitItem.place}">Cathédrale de Strasbourg</td>
-					<td th:text="${placetovisitItem.country}">France</td>
-					<td th:text="${placetovisitItem.price}">15</td>
-					<td th:text="${placetovisitItem.priority}">High</td>
-					<td th:text="${placetovisitItem.comment}">It's beautiful</td>
+				<tr id="tab_body" th:each="placestovisitItem : ${placestovisitItem}">
+					<td th:text="${placestovisitItem.place}">Cathédrale de Strasbourg</td>
+					<td th:text="${placestovisitItem.country}">France</td>
+					<td th:text="${placestovisitItem.price}">15</td>
+					<td th:text="${placestovisitItem.priority}">High</td>
+					<td th:text="${placestovisitItem.comment}">It's beautiful</td>
 					<td><a href="#" class="btn_update" role="button" 
-					th:href="@{/placetovisitItemForm(id=${placetovisitItem.id})}">Update</a></td>
+					th:href="@{/placestovisitItemForm(id=${placestovisitItem.id})}">Update</a></td>
 				</tr>
 			</tbody>
 		</table>
@@ -68,10 +68,11 @@
 		<br>
 		<hr>
 		
-
-	<iframe id="maps" src=""></iframe>
+	<div class="map_container">
+		<iframe id="maps" src=""></iframe>
+	</div>
 	
-	<footer class="footer_other_pages">
+	<footer class="footer_list">
 
 		<div class="footer_box">
 

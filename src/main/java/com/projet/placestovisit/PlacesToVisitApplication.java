@@ -1,13 +1,13 @@
-package com.projet.placetovisit;
+package com.projet.placestovisit;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PlaceToVisitApplication {
+public class PlacesToVisitApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PlaceToVisitApplication.class, args);
+		SpringApplication.run(PlacesToVisitApplication.class, args);
 	}
 
 }
