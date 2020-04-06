@@ -1,1 +1,3 @@
-Ceci est le fichier généré par Adrien
+Ceci est le fichier généré par Adrien et Julien !
+
+Il ne manque plus que Florian à la liste des créateurs.
