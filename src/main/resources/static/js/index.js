@@ -24,7 +24,6 @@ function onChange(){
     miseAJourMap();
 }
 
-
 function miseAJourMap(){    //Fonction de mise à jour de la carte lorsqu'une commune est sélectionnée
 
     macarte.setView([lat, lon], 11);
