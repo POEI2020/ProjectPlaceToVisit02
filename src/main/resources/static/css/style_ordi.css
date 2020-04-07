@@ -532,19 +532,20 @@ hr::after{
 }
 .tab_head
 {
-	text-align: left;
-	background-color: rgb(204, 209, 216);
+	
 }
 .tab_head th
 {
 	padding: 10px;
 	font-size: 1.2em;
+	text-align: left;
+	background-color: rgb(204, 209, 216);
 }
-.text_head5
+.description
 {
 	width: 40%;
 }
-td
+.tab td
 {
 	padding: 15px 0 30px 10px;
 	font-size: 1.1em;
