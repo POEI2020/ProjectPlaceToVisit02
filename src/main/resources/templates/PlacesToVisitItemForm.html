@@ -35,20 +35,101 @@
 	</header>
 
 	<section id="new_item">
-		
-		<div id="formulaire" action="#" method="post" th:action="@{/placestovisitItemForm}"
-		th:object="${placestovisitItem}">
+
+		<div id="formulaire" action="#" method="post" th:action="@{/placestovisitItemForm}" th:object="${placestovisitItem}">
 			<form class="form_field">
 				<fieldset>
-					<legend class="form_title">Submit a place</legend>
-				
-					<input type="text" name="place" placeholder="Place/Region/Museum">
-					<input type="text" name="country" placeholder="Country">
-					<textarea rows="5" cols="22" placeholder="Description"></textarea>
-					<input type="number" name="price" placeholder="Price">
-					<input  type="text" name="priority" placeholder="Low/Medium/High">
+					<legend class="form_title">Choisir une destination</legend>
+					<div>
+						<label for="departement-select">Choisissez un lieu à découvrir :</label><br><br>
+						<select id="departement-select" name="departement" content-type="choices" trigger="true" target="commune" onchange="selectionCommune()" size="1">
+							<option value="02">02-AISNE - Parfondeval
+							<option value="07">07-ARDECHE - Balazuc
+							<option value="13">13-BOUCHES-DU-RHONE - Les Baux-de-Provence
+							<option value="14">14-CALVADOS - Beuvron-en-Auge
+							<option value="18">18-CHER - Aprement-sur-Allier
+							<option value="21">21-COTE-D'OR - Châteauneuf
+							<option value="24">24-DORDOGNE - Castelnaud-la-Chapelle
+							<option value="30">30-GARD - Aigueze
+							<option value="68">68-HAUT-RHIN - Eguisheim
+							<option value="39">39-JURA - Baume-Les-Messieurs
+							<option value="48">48-LOZERE - La Garde-Guérin
+							<option value="49">49-MAINE-ET-LOIRE - Monstoreau
+							<option value="53">53-MAYENNE - Sainte-Suzanne
+							<option value="84">84-VAUCLUSE - Gordes
+						</select>
+						<p id="commune-name"></p>
+						<p id="description-text"></p>
+						<div>
+							<label for="price-estimated">Votre budget pour ce séjour :</label>
+							<input id="price-estimated" type="number" name="price-estimated" placeholder="Budget du séjour">
+						</div>
+						<p></p>
+						<div>
+							<label for="priority">Séjour à réaliser :</label>
+							<select  id="priority" name="priority" content-type="choices" size="1">
+								<option value="7jours">Dans les 7 jours
+								<option value="15jours">Dans les 15 jours
+								<option value="1mois">Dans un mois
+								<option value="6mois">Dans les 6 prochains mois
+								<option value="1an">Dans un an
+								<option value="avantlaretraite">Avant la retraite
+								<option value="simpleidee">Simple idée, pas de priorité
+							</select>
+						</div>
+
+					</div>
+					<br>
+					<!-- 					<div>
+                                            <label for="commune-select">Commune :</label>
+                                            <select id="commune-select" name="commune">
+                                                <optgroup reference="2">
+                                                    <option value="2-1">PARFONDEVAL
+                                                </optgroup>
+                                                <optgroup reference="7">
+                                                    <option value="7-1">BALAZUC
+                                                </optgroup>
+                                                <optgroup reference="13">
+                                                    <option value="13-1">LES BAUX-DE-PROVENCE
+                                                </optgroup>
+                                                <optgroup reference="14">
+                                                    <option value="14-1">BEUVRON-EN-AUGE
+                                                </optgroup>
+                                                <optgroup reference="18">
+                                                    <option value="18-1">APREMENT-SUR-ALLIER
+                                                </optgroup>
+                                                <optgroup reference="21">
+                                                    <option value="21-1">CHATEAUNEUF
+                                                </optgroup>
+                                                <optgroup reference="24">
+                                                    <option value="24-1">CASTELNAUD-LA-CHAPELLE
+                                                </optgroup>
+                                                <optgroup reference="30">
+                                                    <option value="30-1">AIGUEZE
+                                                </optgroup>
+                                                <optgroup reference="68">
+                                                    <option value="68-1">EGUISHEIM
+                                                </optgroup>
+                                                <optgroup reference="39">
+                                                    <option value="39-1">BAUME-LES-MESSIEURS
+                                                </optgroup>
+                                                <optgroup reference="48">
+                                                    <option value="48-1">LA GARDE-GUERIN
+                                                </optgroup>
+                                                <optgroup reference="49">
+                                                    <option value="49-1">MONTSOREAU
+                                                </optgroup>
+                                                <optgroup reference="53">
+                                                    <option value="53-1">SAINTE-SUZANNE
+                                                </optgroup>
+                                                <optgroup reference="84">
+                                                    <option value="84-1">GORDES
+                                                    <option value="84-2">ROUSSILLON
+                                                </optgroup>
+                                            </select>
+                    -->
 					<div id="btn_send">
-					<input type="submit" value="Save Place" class="btn_form">
+						<input type="submit" value="Enregistrer dans mes futures destinations" class="btn_form"  style="width:350px">
 					</div>
 				</fieldset>
 			</form>
@@ -81,6 +162,6 @@
 			</div>
 		</div>
 	</footer>
-	
+	<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
