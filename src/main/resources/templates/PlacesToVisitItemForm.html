@@ -51,7 +51,7 @@
 					<legend class="form_title">Choisir une destination</legend>
 					<div>
 						<label for="departement-select">Choisissez un lieu à découvrir :</label><br><br>
-
+						
 						<select th:field="*{listLieu}" id="departement-select" name="departement" content-type="choices" trigger="true" target="commune" onchange="onChange()" size="1">
 							<option value="02">02-AISNE - Parfondeval
 							<option value="07">07-ARDECHE - Balazuc
@@ -68,14 +68,35 @@
 							<option value="53">53-MAYENNE - Sainte-Suzanne
 							<option value="84">84-VAUCLUSE - Gordes
 						</select>
-						<p id="commune-name"></p>
-						<p th:text="*{description}" id="description-text"></p>
+						<!-- 
+						<select th:field="** {listLieu}" id="departement-select" name="departement" content-type="choices" trigger="true" target="commune" onchange="onChange()" size="1">
+							<option th:value="02" th:text="02-AISNE - Parfondeval"></option>
+							<option th:value="07" th:text="07-ARDECHE - Balazuc"></option>
+							<option th:value="13" th:text="13-BOUCHES-DU-RHONE - Les Baux-de-Provence"></option>
+							<option th:value="14" th:text="14-CALVADOS - Beuvron-en-Auge"></option>
+							<option th:value="18" th:text="18-CHER - Aprement-sur-Allier"></option>
+							<option th:value="21" th:text="21-COTE-D'OR - Châteauneuf"></option>
+							<option th:value="24" th:text="24-DORDOGNE - Castelnaud-la-Chapelle"></option>
+							<option th:value="30" th:text="30-GARD - Aigueze"></option>
+							<option th:value="68" th:text="68-HAUT-RHIN - Eguisheim"></option>
+							<option th:value="39" th:text="39-JURA - Baume-Les-Messieurs"></option>
+							<option th:value="48" th:text="48-LOZERE - La Garde-Guérin"></option>
+							<option th:value="49" th:text="49-MAINE-ET-LOIRE - Monstoreau"></option>
+							<option th:value="53" th:text="53-MAYENNE - Sainte-Suzanne"></option>
+							<option th:value="84" th:text="84-VAUCLUSE - Gordes"></option>
+						</select>
+						 -->
+						<div class="descri">
+							<p id="commune-name"></p>
+							<p th:text="*{description}" id="description-text"></p>
+						</div>
 						<div>
 							<label for="price-estimated">Votre budget pour ce séjour :</label>
 							<input th:field="*{budget}" id="price-estimated" type="number" name="price-estimated" placeholder="Budget du séjour">
 						</div>
 						<div>
 							<label for="priority">Séjour à réaliser :</label>
+							
 							<select th:field="*{date}" id="date" name="date" content-type="choices" size="1">
 								<option value="7jours">Dans les 7 jours
 								<option value="15jours">Dans les 15 jours
@@ -86,6 +107,18 @@
 								<option value="pendantlaretraite">Pendant la retraite
 								<option value="simpleidee">Simple idée, pas de priorité
 							</select>
+							<!-- 
+							<select th:field="*{date}" id="date" name="date" content-type="choices" size="1">
+								<option th:value="7jours" th:text="Dans les 7 jours"></option>
+								<option th:value="15jours" th:text="Dans les 15 jours"></option>
+								<option th:value="1mois" th:text="Dans un mois"></option>
+								<option th:value="6mois" th:text="Dans les 6 prochains mois"></option>
+								<option th:value="1an" th:text="Dans un an"></option>
+								<option th:value="avantlaretraite" th:text="Avant la retraite"></option>
+								<option th:value="pendantlaretraite" th:text="Pendant la retraite"></option>
+								<option th:value="simpleidee" th:text="Simple idée, pas de priorité"></option>
+							</select>
+							 -->
 						</div>
 
 					</div>
@@ -139,9 +172,18 @@
                     -->
                     
                     
+					<!--  
 					<div th:field="*{id}" id="btn_send">
-						<input type="submit" value="Enregistrer dans mes futures destinations" class="btn_form"  style="width:350px">
+						<input type="submit"
+							value="Enregistrer dans mes futures destinations"
+							class="btn_form" style="width: 350px">
 					</div>
+					-->
+					<div class="submit_btn">
+						<input type="hidden" th:field="*{id}" id="btn_send" />
+						<button type="submit" class="btn btn_form" style="width: 350px">Enregistrer dans mes futures destinations</button>
+					</div>
+					
 					<div id="map">
 						<!-- La carte s'affichera ici -->
 					</div>

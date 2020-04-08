@@ -42,12 +42,16 @@ public class PlacesToVisitController {
 	*/
 	@GetMapping("/PlacesToVisitItemForm.html")
 	public ModelAndView showWatchlistItemForm() {
+		System.out.println("1");
 		
 		String viewName = "placesToVisitItemForm";
+		System.out.println("2");
 		
 		Map<String,Object> model = new HashMap<String,Object>();
+		System.out.println("3");
 		
 		model.put("placesToVisitItem", new PlacesToVisitItem());
+		System.out.println("4");
 		
 		return new ModelAndView(viewName,model); 
 	}
@@ -56,11 +60,17 @@ public class PlacesToVisitController {
 	@PostMapping("/PlacesToVisitItemForm.html")
 	public ModelAndView submitPlacesToVisitItemForm(PlacesToVisitItem placesToVisitItem) {
 
+		System.out.println("5 " + placesToVisitItems);
+		
 		placesToVisitItem.setId(index++);
 		placesToVisitItems.add(placesToVisitItem);
+		
+		System.out.println("6 " + placesToVisitItems);
 
 		RedirectView redirectView = new RedirectView();
 		redirectView.setUrl("/MyPlacesToVisit.html");
+		
+		System.out.println("7 " + placesToVisitItems);
 
 		return new ModelAndView(redirectView);
 	}
@@ -68,12 +78,18 @@ public class PlacesToVisitController {
 	
 	@GetMapping("/MyPlacesToVisit.html")
 	public ModelAndView getPlacesList() {
-
+		
+		System.out.println("8 " + placesToVisitItems);
 		String viewName = "myPlacesToVisit";
 		Map<String, Object> model = new HashMap<String, Object>();
+		
+		System.out.println("9 " + placesToVisitItems);
 
-		model.put("placesToVisitItems", placesToVisitItems);
+		model.put("placesToVisitItem", placesToVisitItems);
 		model.put("numberOfPlaces", placesToVisitItems.size());
+		
+		System.out.println("10 " + placesToVisitItems);
+		
 		return new ModelAndView(viewName, model);
 	}
 
