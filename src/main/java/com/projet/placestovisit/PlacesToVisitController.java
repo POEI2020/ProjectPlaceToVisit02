@@ -85,7 +85,7 @@ public class PlacesToVisitController {
 		
 		System.out.println("9 " + placesToVisitItems);
 
-		model.put("placesToVisitItem", placesToVisitItems);
+		model.put("placesToVisitItems", placesToVisitItems);
 		model.put("numberOfPlaces", placesToVisitItems.size());
 		
 		System.out.println("10 " + placesToVisitItems);

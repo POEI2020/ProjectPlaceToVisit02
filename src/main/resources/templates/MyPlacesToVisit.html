@@ -53,10 +53,10 @@
 			</thead>
 			<tbody>
 				<tr id="tab_body" th:each="placesToVisitItem : ${placesToVisitItems}">
-					<td th:text=${placesToVisitItem.listLieu}> </td>
-					<td th:text=${placesToVisitItem.date}> </td>
-					<td th:text=${placesToVisitItem.budget}> </td>
-					<td th:text=${placesToVisitItem.description}> </td>
+					<td th:text="${placesToVisitItem.listLieu}"> </td>
+					<td th:text="${placesToVisitItem.date}"> </td>
+					<td th:text="${placesToVisitItem.budget}"> </td>
+					<td th:text="${placesToVisitItem.description}"> </td>
 					
 					<td><a href="#" class="btn_update" role="button" 
 					>Update</a></td>
