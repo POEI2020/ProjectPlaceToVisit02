@@ -19,7 +19,7 @@ public class PlacesToVisitItem {
 		this.date = date;
 		this.budget = budget;
 		this.description = description;
-		this.id = id;
+		this.id = index;
 	}
 	
 

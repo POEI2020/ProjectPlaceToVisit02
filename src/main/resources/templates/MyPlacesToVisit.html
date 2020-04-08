@@ -47,7 +47,7 @@
 					<th class="tab_lieu">Lieux</th>
 					<th class="tab_date">A quel moment</th>
 					<th class="tab_budget">Budget</th>
-					<th class="description">Description</th>
+					<th class="description_field">Description</th>
 					<th class="tab_update"></th>
 				</tr>
 			</thead>
@@ -59,8 +59,8 @@
 					<td th:text="${placesToVisitItem.description}"> </td>
 					
 					<td><a href="#" class="btn_update" role="button" 
+					th:href="@{/PlacesToVisitItemForm.html(id=${placesToVisitItem.id})}"
 					>Update</a></td>
-					<!-- th:href="@{/placesToVisitItemForm(id=${placesToVisitItem.id})}" -->
 				</tr>
 			</tbody>
 		</table>

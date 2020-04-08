@@ -318,7 +318,7 @@ hr::after{
 {
 	margin-right: 30px;
 }
-#description
+#description_field
 {
 	width: 60%;
 	margin: 20px 10px 0 10px;
@@ -541,7 +541,7 @@ hr::after{
 	text-align: left;
 	background-color: rgb(204, 209, 216);
 }
-.description
+.description_field
 {
 	width: 40%;
 }
