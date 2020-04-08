@@ -45,13 +45,14 @@
 
 	<section id="new_item">
 
-		<div id="formulaire" action="#" method="post" th:action="@{/placestovisitItemForm}" th:object="${placestovisitItem}">
-			<form class="form_field">
+		<div id="formulaire">
+			<form class="form_field" action="#" method="post" th:action="@{/placesToVisitItemForm}" th:object="${placesToVisitItem}">
 				<fieldset>
 					<legend class="form_title">Choisir une destination</legend>
 					<div>
 						<label for="departement-select">Choisissez un lieu à découvrir :</label><br><br>
-						<select id="departement-select" name="departement" content-type="choices" trigger="true" target="commune" onchange="onChange()" size="1">
+
+						<select th:field="*{listLieu}" id="departement-select" name="departement" content-type="choices" trigger="true" target="commune" onchange="onChange()" size="1">
 							<option value="02">02-AISNE - Parfondeval
 							<option value="07">07-ARDECHE - Balazuc
 							<option value="13">13-BOUCHES-DU-RHONE - Les Baux-de-Provence
@@ -68,14 +69,14 @@
 							<option value="84">84-VAUCLUSE - Gordes
 						</select>
 						<p id="commune-name"></p>
-						<p id="description-text"></p>
+						<p th:text="*{description}" id="description-text"></p>
 						<div>
 							<label for="price-estimated">Votre budget pour ce séjour :</label>
-							<input id="price-estimated" type="number" name="price-estimated" placeholder="Budget du séjour">
+							<input th:field="*{budget}" id="price-estimated" type="number" name="price-estimated" placeholder="Budget du séjour">
 						</div>
 						<div>
 							<label for="priority">Séjour à réaliser :</label>
-							<select  id="priority" name="priority" content-type="choices" size="1">
+							<select th:field="*{date}" id="date" name="date" content-type="choices" size="1">
 								<option value="7jours">Dans les 7 jours
 								<option value="15jours">Dans les 15 jours
 								<option value="1mois">Dans un mois
@@ -136,8 +137,11 @@
                                                 </optgroup>
                                             </select>
                     -->
+                    <input type="hidden" th:field="*{id}" />
+                    
 					<div id="btn_send">
-						<input type="submit" value="Enregistrer dans mes futures destinations" class="btn_form"  style="width:350px">
+						<input type="submit" value="Enregistrer dans mes futures destinations" class="btn_form"  style="width:350px"
+						th:href="@{/placeToVisitItemForm(id=${placeToVisitItem.id})}">
 					</div>
 					<div id="map">
 						<!-- La carte s'affichera ici -->
