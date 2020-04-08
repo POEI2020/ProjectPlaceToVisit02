@@ -46,7 +46,7 @@
 	<section id="new_item">
 
 		<div id="formulaire">
-			<form class="form_field" action="#" method="post" th:action="@{/placesToVisitItemForm}" th:object="${placesToVisitItem}">
+			<form class="form_field" action="#" method="post" th:action="@{/PlacesToVisitItemForm.html}" th:object="${placesToVisitItem}">
 				<fieldset>
 					<legend class="form_title">Choisir une destination</legend>
 					<div>
@@ -137,11 +137,10 @@
                                                 </optgroup>
                                             </select>
                     -->
-                    <input type="hidden" th:field="*{id}" />
                     
-					<div id="btn_send">
-						<input type="submit" value="Enregistrer dans mes futures destinations" class="btn_form"  style="width:350px"
-						th:href="@{/placeToVisitItemForm(id=${placeToVisitItem.id})}">
+                    
+					<div th:field="*{id}" id="btn_send">
+						<input type="submit" value="Enregistrer dans mes futures destinations" class="btn_form"  style="width:350px">
 					</div>
 					<div id="map">
 						<!-- La carte s'affichera ici -->
