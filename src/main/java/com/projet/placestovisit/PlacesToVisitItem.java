@@ -1,5 +1,7 @@
 package com.projet.placestovisit;
 
+import org.springframework.web.servlet.view.RedirectView;
+
 public class PlacesToVisitItem {
 	
 	public String listLieu;
@@ -23,6 +25,10 @@ public class PlacesToVisitItem {
 	}
 	
 
+	public String Element() {
+		return Element();
+	}
+	
 	public String getlistLieu() {
 		return listLieu;
 	}

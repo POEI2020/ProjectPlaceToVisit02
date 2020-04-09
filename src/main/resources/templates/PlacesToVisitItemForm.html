@@ -55,6 +55,7 @@
 						<input th:text="*{listLieu}" name="listLieu" type="hidden" placeholder="Lieu à découvrir"/> 
 						<select onclick="this.form.listLieu.value=this.options[this.selectedIndex].text;"
 						id="departement-select" name="departement" content-type="choices" trigger="true" target="commune" onchange="onChange()" size="1">
+							<option> </option>
 							<option value="02">02-AISNE - Parfondeval
 							<option value="07">07-ARDECHE - Balazuc
 							<option value="13">13-BOUCHES-DU-RHONE - Les Baux-de-Provence
@@ -86,6 +87,7 @@
 							<input th:text="*{date}" name="date" type="hidden"/> 
 							<select onclick="this.form.date.value=this.options[this.selectedIndex].text;"
 							id="priority" name="priority_date" content-type="choices" size="1">
+								<option> </option>
 								<option value="7jours">Dans les 7 jours
 								<option value="15jours">Dans les 15 jours
 								<option value="1mois">Dans un mois
