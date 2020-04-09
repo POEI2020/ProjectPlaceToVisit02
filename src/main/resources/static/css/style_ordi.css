@@ -368,10 +368,10 @@ hr::after{
 	position: absolute;
 	bottom: 0;
 }
-.footer_home li, .footer_list li, .footer_form li
+.footer_li
 {
 	list-style: none;
-	padding-left: 10px;
+	margin-left: -30px;
 }
 .footer_home li a, .footer_list li a, .footer_form li a
 {
@@ -431,6 +431,7 @@ hr::after{
 	margin-bottom: 5px;
 	padding-bottom: 0;
 }
+
 
 
 
