@@ -2,11 +2,11 @@ package com.projet.placestovisit;
 
 public class PlacesToVisitItem {
 	
-	private String listLieu;
-	private String date;
-	private String budget;
-	private String description;
-	private Integer id;
+	public String listLieu;
+	public String date;
+	public String budget;
+	public String description;
+	public Integer id;
 	public static int index = 0;
 	
 	public PlacesToVisitItem() {
@@ -19,7 +19,7 @@ public class PlacesToVisitItem {
 		this.date = date;
 		this.budget = budget;
 		this.description = description;
-		this.id = id;
+		this.id = index;
 	}
 	
 

@@ -14,40 +14,28 @@ import org.springframework.web.servlet.view.RedirectView;
 
 @Controller
 public class PlacesToVisitController {
-	
-	
+
 	List<PlacesToVisitItem> placesToVisitItems = new ArrayList<PlacesToVisitItem>();
 	private int index = 0;
+
+
 	
-	
-	@GetMapping("/MyPlacesToVisit.html")
-	public ModelAndView getPlacesList() {
+	@GetMapping("/PlacesToVisitItemForm.html")
+	public ModelAndView showPlacesToVisitItemForm(@RequestParam(required = false) Integer id) {
 		
-		String viewName = "myPlacesToVisit";
 		Map<String, Object> model = new HashMap<String, Object>();
-		
-		model.put("placesToVisitItems", placesToVisitItems);
-		model.put("numberOfPlaces", placesToVisitItems.size());
-		return new ModelAndView(viewName, model);
-	}
-	
-	
-	
-	@GetMapping("/placesToVisitItemForm.html")
-	public ModelAndView showPlacesToVisitItemForm(@RequestParam(required=false) Integer id) {
-		
-		Map<String,Object> model = new HashMap<String,Object>();
-		
 		PlacesToVisitItem placesToVisitItem = findPlacesToVisitItemById(id);
+		
 		if (placesToVisitItem == null) {
 			model.put("placesToVisitItem", new PlacesToVisitItem());
 		} else {
 			model.put("placesToVisitItem", placesToVisitItem);
 		}
-		return new ModelAndView("placeToVisitItemForm" , model);
+		return new ModelAndView("PlacesToVisitItemForm", model);
 	}
-	
+
 	private PlacesToVisitItem findPlacesToVisitItemById(Integer id) {
+		
 		for (PlacesToVisitItem placesToVisitItem : placesToVisitItems) {
 			if (placesToVisitItem.getId().equals(id)) {
 				return placesToVisitItem;
@@ -57,19 +45,40 @@ public class PlacesToVisitController {
 	}
 	
 	
-	
-	
-	@PostMapping("/placesToVisitItemForm.html")
-	public ModelAndView submitWatchlistItemForm(PlacesToVisitItem placesToVisitItem) {
+
+	@PostMapping("/PlacesToVisitItemForm.html")
+	public ModelAndView submitPlacesToVisitItemForm(PlacesToVisitItem placesToVisitItem) {
 		
-		placesToVisitItem.setId(index++);
-		placesToVisitItems.add(placesToVisitItem);
+		PlacesToVisitItem existingItem = findPlacesToVisitItemById(placesToVisitItem.getId());
+		
+		if (existingItem == null) {
+			placesToVisitItem.setId(index++);
+			placesToVisitItems.add(placesToVisitItem);
+		} else {
+			existingItem.setDescription(placesToVisitItem.getDescription());
+			existingItem.setBudget(placesToVisitItem.getBudget());
+			existingItem.setDate(placesToVisitItem.getDate());
+			existingItem.setlistLieu(placesToVisitItem.getlistLieu());
+		}
 		
 		RedirectView redirectView = new RedirectView();
-		redirectView.setUrl("/MyPlacesToVisit");
-		
+		redirectView.setUrl("/MyPlacesToVisit.html");
+
 		return new ModelAndView(redirectView);
 	}
-		
 	
+	
+	
+	@GetMapping("/MyPlacesToVisit.html")
+	public ModelAndView getPlacesList() {
+		
+		String viewName = "myPlacesToVisit";
+		Map<String, Object> model = new HashMap<String, Object>();
+
+		model.put("placesToVisitItems", placesToVisitItems);
+		model.put("numberOfPlaces", placesToVisitItems.size());
+		
+		return new ModelAndView(viewName, model);
+	}
+
 }

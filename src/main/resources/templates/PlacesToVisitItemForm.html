@@ -46,13 +46,15 @@
 	<section id="new_item">
 
 		<div id="formulaire">
-			<form class="form_field" action="#" method="post" th:action="@{/placesToVisitItemForm}" th:object="${placesToVisitItem}">
+			<form class="form_field" action="#" method="post" th:action="@{/PlacesToVisitItemForm.html}" th:object="${placesToVisitItem}">
 				<fieldset>
 					<legend class="form_title">Choisir une destination</legend>
 					<div>
 						<label for="departement-select">Choisissez un lieu à découvrir :</label><br><br>
-
-						<select th:field="*{listLieu}" id="departement-select" name="departement" content-type="choices" trigger="true" target="commune" onchange="onChange()" size="1">
+						
+						<input th:text="*{listLieu}" name="listLieu" type="hidden" placeholder="Lieu à découvrir"/> 
+						<select onclick="this.form.listLieu.value=this.options[this.selectedIndex].text;"
+						id="departement-select" name="departement" content-type="choices" trigger="true" target="commune" onchange="onChange()" size="1">
 							<option value="02">02-AISNE - Parfondeval
 							<option value="07">07-ARDECHE - Balazuc
 							<option value="13">13-BOUCHES-DU-RHONE - Les Baux-de-Provence
@@ -68,15 +70,22 @@
 							<option value="53">53-MAYENNE - Sainte-Suzanne
 							<option value="84">84-VAUCLUSE - Gordes
 						</select>
-						<p id="commune-name"></p>
-						<p th:text="*{description}" id="description-text"></p>
+			
+						<div class="descri">
+							<p id="commune-name"></p>
+							<p th:text="*{description}" id="description-text"></p>
+						</div>
+						
 						<div>
 							<label for="price-estimated">Votre budget pour ce séjour :</label>
 							<input th:field="*{budget}" id="price-estimated" type="number" name="price-estimated" placeholder="Budget du séjour">
 						</div>
 						<div>
 							<label for="priority">Séjour à réaliser :</label>
-							<select th:field="*{date}" id="date" name="date" content-type="choices" size="1">
+							
+							<input th:text="*{date}" name="date" type="hidden"/> 
+							<select onclick="this.form.date.value=this.options[this.selectedIndex].text;"
+							id="priority" name="priority_date" content-type="choices" size="1">
 								<option value="7jours">Dans les 7 jours
 								<option value="15jours">Dans les 15 jours
 								<option value="1mois">Dans un mois
@@ -137,12 +146,20 @@
                                                 </optgroup>
                                             </select>
                     -->
-                    <input type="hidden" th:field="*{id}" />
                     
-					<div id="btn_send">
-						<input type="submit" value="Enregistrer dans mes futures destinations" class="btn_form"  style="width:350px"
-						th:href="@{/placeToVisitItemForm(id=${placeToVisitItem.id})}">
+                    
+					<!--  
+					<div th:field="*{id}" id="btn_send">
+						<input type="submit"
+							value="Enregistrer dans mes futures destinations"
+							class="btn_form" style="width: 350px">
 					</div>
+					-->
+					<div class="submit_btn">
+						<input type="hidden" th:field="*{id}"/>
+						<button type="submit" class="btn btn_form" style="width: 350px">Enregistrer dans mes futures destinations</button>
+					</div>
+					
 					<div id="map">
 						<!-- La carte s'affichera ici -->
 					</div>

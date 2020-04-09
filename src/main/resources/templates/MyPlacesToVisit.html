@@ -47,29 +47,25 @@
 					<th class="tab_lieu">Lieux</th>
 					<th class="tab_date">A quel moment</th>
 					<th class="tab_budget">Budget</th>
-					<th class="description">Description</th>
+					<th class="description_field">Description</th>
 					<th class="tab_update"></th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr id="tab_body" th:each="placesToVisitItem : ${placesToVisitItems}">
-					<td th:text=${placesToVisitItem.listLieu}> </td>
-					<td th:text=${placesToVisitItem.date}> </td>
-					<td th:text=${placesToVisitItem.budget}> </td>
-					<td th:text=${placesToVisitItem.description}> </td>
+					<td th:text="${placesToVisitItem.listLieu}"> </td>
+					<td th:text="${placesToVisitItem.date}"> </td>
+					<td th:text="${placesToVisitItem.budget}"> </td>
+					<td th:text="${placesToVisitItem.description}"> </td>
 					
 					<td><a href="#" class="btn_update" role="button" 
-					th:href="@{/placesToVisitItemForm(id=${placesToVisitItem.id})}">Update</a></td>
+					th:href="@{/PlacesToVisitItemForm.html(id=${placesToVisitItem.id})}"
+					>Update</a></td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 		<br>
-		<hr>
-		
-	<div class="map_container">
-		<iframe id="maps" src=""></iframe>
-	</div>
 	
 	<footer class="footer_list">
 
