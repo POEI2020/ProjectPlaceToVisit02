@@ -78,7 +78,7 @@ public class PlacesToVisitController {
 	@GetMapping("/MyPlacesToVisit.html")
 	public ModelAndView getPlacesList() {
 		
-		String viewName = "myPlacesToVisit";
+		String viewName = "MyPlacesToVisit";
 		Map<String, Object> model = new HashMap<String, Object>();
 
 		model.put("placesToVisitItems", placesToVisitItems);
