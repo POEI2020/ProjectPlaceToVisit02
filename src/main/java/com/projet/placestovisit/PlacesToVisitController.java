@@ -11,8 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @Controller
 public class PlacesToVisitController {
@@ -74,22 +72,10 @@ public class PlacesToVisitController {
 	@GetMapping("/MyPlacesToVisit.html")
 	public ModelAndView getPlacesList() {
 		
-		String viewName = "myPlacesToVisit";
+		String viewName = "MyPlacesToVisit";
 		Map<String, Object> model = new HashMap<String, Object>();
 
 		model.put("placesToVisitItems", placesToVisitItems);
-		model.put("numberOfPlaces", placesToVisitItems.size());
-		
-		return new ModelAndView(viewName, model);
-	}
-	
-	
-	@GetMapping("/Index.html")
-	public ModelAndView getPlacesToVisitHome() {
-		
-		String viewName = "myPlaceToVisitHome";
-		Map<String, Object> model = new HashMap<String, Object>();
-
 		model.put("numberOfPlaces", placesToVisitItems.size());
 		
 		return new ModelAndView(viewName, model);

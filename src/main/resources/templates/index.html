@@ -1,4 +1,5 @@
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style_ordi.css">
@@ -40,7 +41,9 @@
 		</div>
 
 		<label for="control_left" class="previous"><i class="fas fa-angle-left"></i></label>
+		<input id="control_left" type="hidden">
 		<label for="control_right" class="next"><i class="fas fa-angle-right"></i></label>
+		<input id="control_right" type="hidden">
 
 		<div class="slider_caption">
 			<h1><span>PlacesToVisit</span> : LE LIEU DE TOUS VOS LIEUX !</h1>
@@ -169,10 +172,11 @@
 
 			<div class="legal_terms">
 				<h3 class="footer_title2">Legal</h3>
-					
-				<li><a href="#">Privacy Policy</a></li>
-				<li><a href="#">Terms of Use</a></li>
-				<li><a href="#">Sitemap</a></li>
+				<ul class="footer_ul">	
+					<li class="footer_li"><a href="#">Privacy Policy</a></li>
+					<li class="footer_li"><a href="#">Terms of Use</a></li>
+					<li class="footer_li"><a href="#">Sitemap</a></li>
+				</ul>
 			</div>
 		</div>
 	</footer>
