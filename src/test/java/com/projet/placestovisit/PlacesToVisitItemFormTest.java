@@ -13,7 +13,7 @@ public class PlacesToVisitItemFormTest {
 	@Before
 	public void init() {
 		
-		PlacesToVisitItemTest=new PlacesToVisitItem("un certain lieu", "une certaine date", "un certain budget", "une certaine description", 2);
+		PlacesToVisitItemTest=new PlacesToVisitItem("un certain lieu", "une certaine date", "un certain budget", "un certain commentaire", 2);
 	}
 	
 	@Test
@@ -35,9 +35,9 @@ public class PlacesToVisitItemFormTest {
 	}
 	
 	@Test
-	public void testDescription() {
-		 PlacesToVisitItemTest.setDescription("une merveilleuse description");
-		 assertEquals( PlacesToVisitItemTest.getDescription(), "une merveilleuse description");
+	public void testCommentaire() {
+		 PlacesToVisitItemTest.setCommentaire("un merveilleux commentaire");
+		 assertEquals( PlacesToVisitItemTest.getCommentaire(), "un merveilleux commentaire");
 	}
 	
 	@Test
