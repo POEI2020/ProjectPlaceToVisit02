@@ -61,7 +61,7 @@ public class PlacesToVisitController {
 			placesToVisitItem.setId(index++);
 			placesToVisitItems.add(placesToVisitItem);
 		} else {
-			existingItem.setDescription(placesToVisitItem.getDescription());
+			existingItem.setCommentaire(placesToVisitItem.getCommentaire());
 			existingItem.setBudget(placesToVisitItem.getBudget());
 			existingItem.setDate(placesToVisitItem.getDate());
 			existingItem.setlistLieu(placesToVisitItem.getlistLieu());

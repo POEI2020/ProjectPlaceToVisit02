@@ -22,7 +22,7 @@ public class PlacesToVisitItem {
 	public String listLieu;
 	public String date;
 	public String budget;
-	public String description;
+	public String commentaire;
 	public Integer id;
 	public static int index = 0;
 	
@@ -30,12 +30,12 @@ public class PlacesToVisitItem {
 		this.id = index ++;
 	}
 
-	public PlacesToVisitItem(String listLieu, String date, String budget, String description, Integer id) {
+	public PlacesToVisitItem(String listLieu, String date, String budget, String commentaire, Integer id) {
 		super();
 		this.listLieu = listLieu;
 		this.date = date;
 		this.budget = budget;
-		this.description = description;
+		this.commentaire = commentaire;
 		this.id = index;
 	}
 	
@@ -64,12 +64,12 @@ public class PlacesToVisitItem {
 		this.budget = budget;
 	}
 
-	public String getDescription() {
-		return description;
+	public String getCommentaire() {
+		return commentaire;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
+	public void setCommentaire(String commentaire) {
+		this.commentaire = commentaire;
 	}
 
 	public Integer getId() {

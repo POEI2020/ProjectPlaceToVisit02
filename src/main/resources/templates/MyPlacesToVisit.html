@@ -18,9 +18,9 @@
 		<nav id="nav_title">
 			<div id="logo_title">
 				<a href="./index.html"><img src="img/logo.png" alt="logo PlacesToVisit"></a>
-				<h1><a href="./index.html">PlacesToVisit</a></h1>
+				<h1><a href="./index.html">Les villages en France</a></h1>
 			</div>
-	
+
 			<div id="menu_nav">
 
 				<input class="check_hamb" type="checkbox" />
@@ -28,9 +28,9 @@
 				<i class="fas fa-bars"></i>
 
 				<ul id="menu">
-					<li><a href="./index.html">Home</a></li>
-					<li><a href="./MyPlacesToVisit.html">My Places</a></li>
-					<li><a href="./PlacesToVisitItemForm.html">New Places</a></li>
+					<li><a href="./index.html">Accueil</a></li>
+					<li><a href="./MyPlacesToVisit.html">Mes villages</a></li>
+					<li><a href="./PlacesToVisitItemForm.html">Ajouter un lieu</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -49,7 +49,7 @@
 					<th class="tab_lieu">Lieux</th>
 					<th class="tab_date">A quel moment</th>
 					<th class="tab_budget">Budget</th>
-					<th class="description_field">Description</th>
+					<th class="description_field">Commentaire</th>
 					<th class="tab_update"></th>
 				</tr>
 			</thead>
@@ -58,7 +58,7 @@
 					<td th:text="${placesToVisitItem.listLieu}"> </td>
 					<td th:text="${placesToVisitItem.date}"> </td>
 					<td th:text="${placesToVisitItem.budget}"> </td>
-					<td th:text="${placesToVisitItem.description}"> </td>
+					<td th:text="${placesToVisitItem.commentaire}"> </td>
 					
 					<td><a href="#" class="btn_update" role="button" 
 					th:href="@{/PlacesToVisitItemForm.html(id=${placesToVisitItem.id})}"
@@ -79,7 +79,7 @@
 			</div>
 		
 			<div class="social_media">
-				<h3 class="footer_title1">Share your list with your Friends</h3>	
+				<h3 class="footer_title1">Partagez avec vos amis</h3>
 				<a><i class="fab fa-facebook-f"></i></a>
 				<a><i class="fab fa-twitter"></i></a>
 				<a><i class="fab fa-instagram"></i></a>

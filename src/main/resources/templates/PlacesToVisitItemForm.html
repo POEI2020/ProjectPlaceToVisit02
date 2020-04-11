@@ -26,7 +26,7 @@
 		<nav id="nav_title">
 			<div id="logo_title">
 				<a href="./index.html"><img src="img/logo.png" alt="logo PlacesToVisit"></a>
-				<h1><a href="./index.html">PlacesToVisit</a></h1>
+				<h1><a href="./index.html">Les villages en France</a></h1>
 			</div>
 	
 			<div id="menu_nav">
@@ -36,9 +36,9 @@
 				<i class="fas fa-bars"></i>
 
 				<ul id="menu">
-					<li><a href="./index.html">Home</a></li>
-					<li><a href="./MyPlacesToVisit.html">My Places</a></li>
-					<li><a href="./PlacesToVisitItemForm.html">New Places</a></li>
+					<li><a href="./index.html">Accueil</a></li>
+					<li><a href="./MyPlacesToVisit.html">Mes villages</a></li>
+					<li><a href="./PlacesToVisitItemForm.html">Ajouter un lieu</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -57,7 +57,7 @@
 						<select onclick="this.form.listLieu.value=this.options[this.selectedIndex].text;"
 						id="departement-select" name="departement" onchange="onChange()" size="1">
 							<option id="vide"> </option>
-							<label for "vide" class="vide"></label>
+							<label for="vide" class="vide"></label>
 							<option value="02">02-AISNE - Parfondeval
 							<option value="07">07-ARDECHE - Balazuc
 							<option value="13">13-BOUCHES-DU-RHONE - Les Baux-de-Provence
@@ -76,7 +76,7 @@
 			
 						<div class="descri">
 							<p id="commune-name"></p>
-							<p th:text="*{description}" id="description-text"></p>
+							<p id="description-text"></p> <!--th:text="*{description}"-->
 						</div>
 						
 						<div>
@@ -99,6 +99,10 @@
 								<option value="pendantlaretraite">Pendant la retraite
 								<option value="simpleidee">Simple idée, pas de priorité
 							</select>
+						</div>
+						<div>
+							<label for="commentaire">Commentaire (optionnel) :</label>
+							<input th:text="*{commentaire}" type="text" id="commentaire" name="commentaire" maxlength="200" size="30"/>
 						</div>
 
 					</div>
@@ -182,7 +186,7 @@
 			</div>
 		
 			<div class="social_media">
-				<h3 class="footer_title1">Share your list with your Friends</h3>	
+				<h3 class="footer_title1">Partagez avec vos amis</h3>
 				<a href="#"><i class="fab fa-facebook-f"></i></a>
 				<a href="#"><i class="fab fa-twitter"></i></a>
 				<a href="#"><i class="fab fa-instagram"></i></a>
