@@ -15,7 +15,7 @@ public class PlacesToVisitItem {
 		this.id = index ++;
 	}
 
-	public PlacesToVisitItem(String listLieu, String date, String budget, String commentaire, Integer id) {
+	public PlacesToVisitItem(String listLieu, String date, String budget, String commentaire) {
 		super();
 		this.listLieu = listLieu;
 		this.date = date;
