@@ -5,10 +5,10 @@ package com.projet.placestovisit;
 public class PlacesToVisitItem {
 	
 	public String listLieu;
-	public String date;
-	public String budget;
-	public String commentaire;
-	public Integer id;
+	private String date;
+	private String budget;
+	private String commentaire;
+	private Integer id;
 	public static int index = 0;
 	
 	public PlacesToVisitItem() {
