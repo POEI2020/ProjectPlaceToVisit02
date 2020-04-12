@@ -3,7 +3,6 @@ package com.projet.placestovisit;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class PlacesToVisitItemFormTest {
@@ -13,7 +12,7 @@ public class PlacesToVisitItemFormTest {
 	@Before
 	public void init() {
 		
-		PlacesToVisitItemTest=new PlacesToVisitItem("un certain lieu", "une certaine date", "un certain budget", "un certain commentaire", 2);
+		PlacesToVisitItemTest=new PlacesToVisitItem("un certain lieu", "une certaine date", "un certain budget", "un certain commentaire");
 	}
 	
 	@Test
