@@ -19,30 +19,30 @@ public class PlacesToVisitItemFormTest {
 	@Test
 	public void testLieu() {
 		 PlacesToVisitItemTest.setlistLieu("un lieu génial");
-		 assertEquals( PlacesToVisitItemTest.getlistLieu(), "un lieu génial");
+		 assertEquals("un lieu génial", PlacesToVisitItemTest.getlistLieu());
 	}
 
 	@Test
 	public void testDate() {
 		 PlacesToVisitItemTest.setDate("une date géniale");
-		 assertEquals( PlacesToVisitItemTest.getDate(), "une date géniale");
+		 assertEquals("une date géniale", PlacesToVisitItemTest.getDate());
 	}
 	
 	@Test
 	public void testBudget() {
 		 PlacesToVisitItemTest.setBudget("un budget parfait");
-		 assertEquals( PlacesToVisitItemTest.getBudget(), "un budget parfait");
+		 assertEquals("un budget parfait", PlacesToVisitItemTest.getBudget());
 	}
 	
 	@Test
 	public void testCommentaire() {
 		 PlacesToVisitItemTest.setCommentaire("un merveilleux commentaire");
-		 assertEquals( PlacesToVisitItemTest.getCommentaire(), "un merveilleux commentaire");
+		 assertEquals("un merveilleux commentaire", PlacesToVisitItemTest.getCommentaire());
 	}
 	
 	@Test
 	public void testId() {
 		 PlacesToVisitItemTest.setId(3);
-		 assertEquals( PlacesToVisitItemTest.getId().intValue(), 3);
+		 assertEquals(3, PlacesToVisitItemTest.getId().intValue());
 	}
 }
