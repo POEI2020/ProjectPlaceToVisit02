@@ -53,7 +53,6 @@
 					<div>
 						<label for="departement-select">Choisissez un lieu à découvrir :</label><br><br>
 						
-						<input th:text="*{listLieu}" name="listLieu" type="hidden"/> 
 						<select onclick="this.form.listLieu.value=this.options[this.selectedIndex].text;"
 						id="departement-select" name="departement" onchange="onChange()" size="1">
 							<option id="vide"> </option>
@@ -73,6 +72,7 @@
 							<option value="53">53-MAYENNE - Sainte-Suzanne
 							<option value="84">84-VAUCLUSE - Gordes
 						</select>
+						<input th:text="*{listLieu}" name="listLieu" type="hidden"/> 
 			
 						<div class="descri">
 							<p id="commune-name"></p>
@@ -86,7 +86,6 @@
 						<div>
 							<label for="priority">Séjour à réaliser :</label>
 							
-							<input th:text="*{date}" name="date" type="hidden"/> 
 							<select onclick="this.form.date.value=this.options[this.selectedIndex].text;"
 							id="priority" name="priority_date" size="1">
 								<option> </option>
@@ -99,6 +98,7 @@
 								<option value="pendantlaretraite">Pendant la retraite
 								<option value="simpleidee">Simple idée, pas de priorité
 							</select>
+							<input th:text="*{date}" name="date" type="hidden"/> 
 						</div>
 						<div>
 							<label for="commentaire">Commentaire (optionnel) :</label>
