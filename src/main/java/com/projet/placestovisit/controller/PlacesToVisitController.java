@@ -1,4 +1,4 @@
-package com.projet.placestovisit;
+package com.projet.placestovisit.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
+
+import com.projet.placestovisit.domain.PlacesToVisitItem;
 
 
 
@@ -60,7 +62,7 @@ public class PlacesToVisitController {
 			existingItem.setCommentaire(placesToVisitItem.getCommentaire());
 			existingItem.setBudget(placesToVisitItem.getBudget());
 			existingItem.setDate(placesToVisitItem.getDate());
-			existingItem.setlistLieu(placesToVisitItem.getlistLieu());
+			existingItem.setListLieu(placesToVisitItem.getListLieu());
 		}
 		
 		RedirectView redirectView = new RedirectView();

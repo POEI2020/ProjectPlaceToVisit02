@@ -1,4 +1,4 @@
-package com.projet.placestovisit;
+package com.projet.placestovisit.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;

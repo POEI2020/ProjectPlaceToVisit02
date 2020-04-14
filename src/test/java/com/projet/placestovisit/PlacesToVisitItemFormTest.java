@@ -5,6 +5,8 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.projet.placestovisit.domain.PlacesToVisitItem;
+
 public class PlacesToVisitItemFormTest {
 
 	PlacesToVisitItem PlacesToVisitItemTest;
