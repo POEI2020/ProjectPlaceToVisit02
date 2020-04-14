@@ -23,8 +23,7 @@
 	} 
 	#description
 	{
-		text-align: justify;
-		width: auto;
+		width: 90%;
 	}
 	#formulaire
 	{
@@ -186,7 +185,7 @@
 	#description
 	{
 		text-align: justify;
-		width: auto;
+		width: 90%;
 	}
 	.fa-save, .fa-list-ol, .fa-map-marker-alt, .fa-percent, .fa-check
 	{
@@ -202,16 +201,11 @@
 	{
 		margin-top: 80px;
 	}
-	#maps
-	{
-		position: relative;
-		top: 370px;
-	}
 	#formulaire
 	{
-		width: 70%;
-		left: 15%;
-		right: 15%;
+		width: 90%;
+		left: 5%;
+		right: 5%;
 	}
 	.tab
 	{
@@ -226,16 +220,7 @@
 	.footer_form
 	{
 		width: 100%;
-		position: relative;
 		bottom: 0;
-	}
-	.footer_list
-	{
-		display: none;
-	}
-	#maps
-	{
-		bottom: 0px;
 	}
 
 }

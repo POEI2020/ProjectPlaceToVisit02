@@ -365,8 +365,7 @@ hr::after{
 	color: #ffffff;
 	background-color: rgb(44, 42, 42);
 	width: 100%;
-	position: absolute;
-	bottom: 0;
+	margin-top: 200px;
 }
 .footer_li
 {
@@ -446,11 +445,6 @@ hr::after{
 	font-size: 2.5em;
 	padding: 0 10px 0 10px;
 }
-#new_item iframe
-{
-	border: 0;
-	
-}
 #formulaire
 {
 	background-color: #F5F5F5;
@@ -463,54 +457,34 @@ hr::after{
 	z-index: 2;
 	margin-bottom: 50px;
 }
-#formulaire input
+#formulaire input, #formulaire select
 {
 	width: 80%;
 	height: 2em;
 	margin: 10px 0 10px 0;
 	margin-left: 10%;
-	font-size: 1.1em;
 	border: 1px solid rgb(170,170,170);
 	border-radius: 3px;
 	padding-left: 5px;
-}
-#formulaire textarea
-{
-	width: 80%;
-	margin: 10px 0 10px 0;
-	margin-left: 10%;
-	font-size: 1.3em;
-	padding-left: 5px;
-	border: 1px solid rgb(170,170,170);
-	border-radius: 3px;
-	resize: none;
 }
 .btn_form
 {
 	background-color: rgba(10,150,250,0.9);
 	border-color: #5C92D4;
 	color: white;
+	font-size: 1em;
 	box-shadow: 0 2px #5C92D4;
 	border-radius: 3px;
 	cursor: pointer;
 }
-#btn_send
+.submit_btn
 {
-	width: 125px;
-	margin-left: 20%;
+	margin: 10px 0 20px 0;
 }
 
 
 
 /*placetovisitItem : Liste des lieux*/
-#maps
-{
-    width: 100%;
-    height: 600px;
-	position: absolute;
-	z-index: 1;
-	bottom: 150px;
-}
 .container
 {
 	margin-top: 100px;
@@ -530,10 +504,6 @@ hr::after{
 	margin: auto;
 	margin-bottom: 10px;
 	border-collapse:collapse;
-}
-.tab_head
-{
-	
 }
 .tab_head th
 {
