@@ -60,7 +60,7 @@ public class PlacesToVisitController {
 			existingItem.setCommentaire(placesToVisitItem.getCommentaire());
 			existingItem.setBudget(placesToVisitItem.getBudget());
 			existingItem.setDate(placesToVisitItem.getDate());
-			existingItem.setlistLieu(placesToVisitItem.getlistLieu());
+			existingItem.setListLieu(placesToVisitItem.getListLieu());
 		}
 		
 		RedirectView redirectView = new RedirectView();
