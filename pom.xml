@@ -16,6 +16,9 @@
    <packaging>war</packaging>
    <properties>
       <java.version>1.8</java.version>
+      <sonar.core.codeCoveragePlugin>jacoco</sonar.core.codeCoveragePlugin>
+	  <sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
+  	  <sonar.language>java</sonar.language>
    </properties>
    <dependencies>
       <!-- Spring Boot library -->
@@ -116,6 +119,28 @@
             <artifactId>sonar-maven-plugin</artifactId>
             <version>3.5.0.1254</version>
          </plugin>
+          <plugin>
+      <groupId>org.jacoco</groupId>
+      <artifactId>jacoco-maven-plugin</artifactId>
+      <version>0.7.2.201409121644</version>
+      <configuration>
+        <append>true</append>
+      </configuration>
+      <executions>
+        <execution>
+          <goals>
+            <goal>prepare-agent</goal>
+          </goals>
+        </execution>
+        <execution>
+          <id>post-unit-test</id>
+          <phase>test</phase>
+          <goals>
+            <goal>report</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
       </plugins>
    </build>
 </project>
