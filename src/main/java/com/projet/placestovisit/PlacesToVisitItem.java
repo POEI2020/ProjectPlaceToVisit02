@@ -4,12 +4,12 @@ package com.projet.placestovisit;
 
 public class PlacesToVisitItem {
 	
-	public String listLieu;
+	private String listLieu;
 	private String date;
 	private String budget;
 	private String commentaire;
 	private Integer id;
-	public static int index = 0;
+	private static int index = 0;
 	
 	public PlacesToVisitItem() {
 		this.id = index ++;
@@ -25,11 +25,11 @@ public class PlacesToVisitItem {
 	}
 	
 
-	public String getlistLieu() {
+	public String getListLieu() {
 		return listLieu;
 	}
 
-	public void setlistLieu(String listLieu) {
+	public void setListLieu(String listLieu) {
 		this.listLieu = listLieu;
 	}
 	

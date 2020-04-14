@@ -17,8 +17,8 @@ public class PlacesToVisitItemFormTest {
 	
 	@Test
 	public void testLieu() {
-		 PlacesToVisitItemTest.setlistLieu("un lieu génial");
-		 assertEquals("un lieu génial", PlacesToVisitItemTest.getlistLieu());
+		 PlacesToVisitItemTest.setListLieu("un lieu génial");
+		 assertEquals("un lieu génial", PlacesToVisitItemTest.getListLieu());
 	}
 
 	@Test
