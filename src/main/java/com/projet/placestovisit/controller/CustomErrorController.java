@@ -13,15 +13,15 @@ public class CustomErrorController implements ErrorController {
 
 	@Override
 	public String getErrorPath() {
-		return "/error.html";
+		return "/error";
 	}
 	
-	@GetMapping("/error.html")
+	@GetMapping("/error")
 	public ModelAndView handleError(HttpServletRequest request) {
 		
 		Object code = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
 		System.out.println("Error with code " + code + " Happened");
-	    return new ModelAndView("error.html");
+	    return new ModelAndView("error");
 	}
 
 }
