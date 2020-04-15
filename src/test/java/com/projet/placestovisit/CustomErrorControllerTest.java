@@ -27,7 +27,7 @@ PlacesToVisitItem PlacesToVisititemTest;
 		
 	@Test
 	public void test() throws Exception {
-		mockMvc.perform(get("/error.html"))
+		mockMvc.perform(get("/error"))
 		.andExpect(status().is2xxSuccessful());
 	}
 
