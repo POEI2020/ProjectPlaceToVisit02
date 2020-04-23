@@ -9,7 +9,7 @@ pipeline {
                 }
             }
         }
-        stage ('compile stage') {
+        stage ('test') {
             steps {
                 withMaven(maven : 'Maven'){
                 sh 'mvn test'
